@@ -1,0 +1,26 @@
+# Setup git and github account in ubuntu server
+
+### Install git for sure
+```
+sudo apt install git -y
+```
+
+### Setup Git username & email
+```
+git config --global user.name 'nosmall'
+git config --global user.email 'jirka@jiripocta.cz'
+```
+
+### Setup new SSH authentication
+```
+ssh-keygen -t ed25519 -C "jirka@jiripocta.cz"
+Enter
+Enter
+```
+
+### Copy new public ssh key to github page, settings > SSH and GPG Keys (https://github.com/settings/keys)
+```
+cat ~/.ssh/id_ed25519.pub
+```
+
+### Source: https://cis106.com/guides/Ubuntu%20Github%20Setup/
